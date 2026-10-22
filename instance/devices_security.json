@@ -1,0 +1,123 @@
+[
+  {
+    "mac_address": "00:11:22:33:44:55",
+    "security_score": 85,
+    "security_issues": [
+      {
+        "id": "ISSUE-001",
+        "description": "Firmware obsol\u00e8te",
+        "severity": "medium",
+        "solution": "Mettre \u00e0 jour le firmware vers la derni\u00e8re version disponible"
+      },
+      {
+        "id": "ISSUE-002",
+        "description": "UPnP activ\u00e9",
+        "severity": "low",
+        "solution": "D\u00e9sactiver UPnP dans les param\u00e8tres du routeur"
+      }
+    ],
+    "recommendations": [
+      "Mettre \u00e0 jour le firmware du routeur",
+      "D\u00e9sactiver UPnP pour une meilleure s\u00e9curit\u00e9",
+      "Activer le pare-feu int\u00e9gr\u00e9"
+    ],
+    "last_updated": "2025-02-26T18:58:18.371172"
+  },
+  {
+    "mac_address": "66:77:88:99:AA:BB",
+    "security_score": 75,
+    "security_issues": [
+      {
+        "id": "ISSUE-003",
+        "description": "Antivirus non \u00e0 jour",
+        "severity": "medium",
+        "solution": "Mettre \u00e0 jour l'antivirus"
+      }
+    ],
+    "recommendations": [
+      "Mettre \u00e0 jour les logiciels de s\u00e9curit\u00e9",
+      "Activer le pare-feu Windows",
+      "Utiliser un VPN pour les connexions publiques"
+    ],
+    "last_updated": "2025-02-26T18:58:18.371179"
+  },
+  {
+    "mac_address": "CC:DD:EE:FF:00:11",
+    "security_score": 65,
+    "security_issues": [
+      {
+        "id": "ISSUE-004",
+        "description": "Applications non mises \u00e0 jour",
+        "severity": "medium",
+        "solution": "Mettre \u00e0 jour toutes les applications"
+      },
+      {
+        "id": "ISSUE-005",
+        "description": "Connexion \u00e0 des r\u00e9seaux publics fr\u00e9quente",
+        "severity": "medium",
+        "solution": "Utiliser un VPN sur les r\u00e9seaux publics"
+      }
+    ],
+    "recommendations": [
+      "Activer les mises \u00e0 jour automatiques",
+      "Installer un gestionnaire de mots de passe",
+      "Utiliser un VPN sur les r\u00e9seaux publics"
+    ],
+    "last_updated": "2025-02-26T18:58:18.371182"
+  },
+  {
+    "mac_address": "22:33:44:55:66:77",
+    "security_score": 35,
+    "security_issues": [
+      {
+        "id": "ISSUE-006",
+        "description": "Mot de passe par d\u00e9faut non modifi\u00e9",
+        "severity": "high",
+        "solution": "Changer le mot de passe par d\u00e9faut"
+      },
+      {
+        "id": "ISSUE-007",
+        "description": "Firmware obsol\u00e8te",
+        "severity": "high",
+        "solution": "Mettre \u00e0 jour le firmware"
+      },
+      {
+        "id": "ISSUE-008",
+        "description": "Connexion non chiffr\u00e9e",
+        "severity": "high",
+        "solution": "Activer HTTPS/TLS pour l'acc\u00e8s \u00e0 la cam\u00e9ra"
+      }
+    ],
+    "recommendations": [
+      "Changer imm\u00e9diatement le mot de passe par d\u00e9faut",
+      "Mettre \u00e0 jour le firmware",
+      "Placer la cam\u00e9ra dans un r\u00e9seau isol\u00e9",
+      "D\u00e9sactiver l'acc\u00e8s \u00e0 distance si non n\u00e9cessaire"
+    ],
+    "last_updated": "2025-02-26T18:58:18.371185"
+  },
+  {
+    "mac_address": "88:99:AA:BB:CC:DD",
+    "security_score": 55,
+    "security_issues": [
+      {
+        "id": "ISSUE-009",
+        "description": "Firmware non mis \u00e0 jour",
+        "severity": "medium",
+        "solution": "Mettre \u00e0 jour le firmware de la t\u00e9l\u00e9vision"
+      },
+      {
+        "id": "ISSUE-010",
+        "description": "Suivi publicitaire activ\u00e9",
+        "severity": "low",
+        "solution": "D\u00e9sactiver le suivi publicitaire dans les param\u00e8tres"
+      }
+    ],
+    "recommendations": [
+      "Mettre \u00e0 jour le firmware de la t\u00e9l\u00e9vision",
+      "D\u00e9sactiver les fonctionnalit\u00e9s de suivi et de collecte de donn\u00e9es",
+      "Consid\u00e9rer l'utilisation d'un bo\u00eetier multim\u00e9dia externe plus s\u00e9curis\u00e9"
+    ],
+    "last_updated": "2025-02-26T18:58:18.371188"
+  }
+]

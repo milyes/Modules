@@ -1,0 +1,2 @@
+sqlite3 gestion_projets.db
+.tables  # Devrait afficher "projet" et "tache"

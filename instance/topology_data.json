@@ -1,0 +1,108 @@
+{
+  "devices": [
+    {
+      "mac_address": "00:11:22:33:44:55",
+      "name": "Routeur WiFi Principal",
+      "device_type": "router",
+      "manufacturer": "Netgear",
+      "model": "Nighthawk RAX50",
+      "firmware_version": "V1.0.3.80",
+      "ip_address": "192.168.1.1",
+      "connection_type": "ethernet",
+      "online": true,
+      "signal_strength": -35,
+      "security_score": 85,
+      "os": "Propri\u00e9taire",
+      "last_seen": "2025-02-26T18:58:18.370176",
+      "x": 400,
+      "y": 300
+    },
+    {
+      "mac_address": "66:77:88:99:AA:BB",
+      "name": "Ordinateur Portable",
+      "device_type": "laptop",
+      "manufacturer": "Dell",
+      "model": "XPS 15",
+      "ip_address": "192.168.1.100",
+      "connection_type": "wifi",
+      "online": true,
+      "signal_strength": -55,
+      "security_score": 75,
+      "os": "Windows 11",
+      "last_seen": "2025-02-26T18:58:18.370186",
+      "x": 300,
+      "y": 200
+    },
+    {
+      "mac_address": "CC:DD:EE:FF:00:11",
+      "name": "Smartphone",
+      "device_type": "phone",
+      "manufacturer": "Samsung",
+      "model": "Galaxy S22",
+      "ip_address": "192.168.1.101",
+      "connection_type": "wifi",
+      "online": true,
+      "signal_strength": -60,
+      "security_score": 65,
+      "os": "Android 13",
+      "last_seen": "2025-02-26T18:58:18.370189",
+      "x": 500,
+      "y": 200
+    },
+    {
+      "mac_address": "22:33:44:55:66:77",
+      "name": "Cam\u00e9ra IP",
+      "device_type": "iot",
+      "manufacturer": "Hikvision",
+      "model": "DS-2CD2342WD-I",
+      "ip_address": "192.168.1.102",
+      "connection_type": "wifi",
+      "online": true,
+      "signal_strength": -65,
+      "security_score": 35,
+      "os": "Propri\u00e9taire",
+      "last_seen": "2025-02-26T18:58:18.370192",
+      "x": 600,
+      "y": 400
+    },
+    {
+      "mac_address": "88:99:AA:BB:CC:DD",
+      "name": "Smart TV",
+      "device_type": "tv",
+      "manufacturer": "LG",
+      "model": "OLED C2",
+      "ip_address": "192.168.1.103",
+      "connection_type": "wifi",
+      "online": true,
+      "signal_strength": -70,
+      "security_score": 55,
+      "os": "WebOS 6.0",
+      "last_seen": "2025-02-26T18:58:18.370195",
+      "x": 200,
+      "y": 400
+    }
+  ],
+  "connections": [
+    {
+      "source": "00:11:22:33:44:55",
+      "target": "66:77:88:99:AA:BB",
+      "connection_type": "wifi"
+    },
+    {
+      "source": "00:11:22:33:44:55",
+      "target": "CC:DD:EE:FF:00:11",
+      "connection_type": "wifi"
+    },
+    {
+      "source": "00:11:22:33:44:55",
+      "target": "22:33:44:55:66:77",
+      "connection_type": "wifi"
+    },
+    {
+      "source": "00:11:22:33:44:55",
+      "target": "88:99:AA:BB:CC:DD",
+      "connection_type": "wifi"
+    }
+  ],
+  "timestamp": "2025-02-26T18:58:18.370200"
+}

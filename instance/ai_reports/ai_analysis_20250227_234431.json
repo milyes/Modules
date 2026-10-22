@@ -1,0 +1,46 @@
+{
+  "timestamp": "2025-02-27T23:44:31.478190",
+  "network_stats": {
+    "overall_score": 63.0,
+    "device_count": 5,
+    "high_risk_count": 1,
+    "medium_risk_count": 3,
+    "low_risk_count": 1,
+    "last_updated": "2025-02-27T23:44:31.478083"
+  },
+  "devices_analyzed": 5,
+  "threats_detected": [
+    {
+      "type": "Attaque par force brute",
+      "severity": "low",
+      "timestamp": "2025-02-27T23:44:31.478095",
+      "source_ip": "192.168.1.159",
+      "description": "Détection automatique par analyse IA"
+    },
+    {
+      "type": "Tentative de désauthentification",
+      "severity": "critical",
+      "timestamp": "2025-02-27T23:44:31.478104",
+      "source_ip": "192.168.1.214",
+      "description": "Détection automatique par analyse IA"
+    }
+  ],
+  "ai_recommendations": [
+    {
+      "title": "Surveillance comportementale du réseau",
+      "description": "Déployer une solution de détection d'anomalies basée sur l'apprentissage automatique pour identifier les comportements suspects.",
+      "ai_confidence": 85
+    },
+    {
+      "title": "Simulation d'attaque (Red Team)",
+      "description": "Organiser des exercices réguliers de simulation d'attaque pour tester les défenses et la réponse aux incidents.",
+      "ai_confidence": 80
+    },
+    {
+      "title": "Programme de formation à la sécurité",
+      "description": "Former régulièrement les utilisateurs aux meilleures pratiques de sécurité et aux techniques d'ingénierie sociale.",
+      "ai_confidence": 90
+    }
+  ],
+  "security_score": 0
+}

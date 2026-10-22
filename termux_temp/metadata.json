@@ -1,0 +1,11 @@
+{
+  "name": "Termux Toolkit Hub",
+  "description": "A comprehensive web-based management suite and AI assistant for Termux users. Generate scripts, explain complex commands, and manage your mobile Linux environment with ease.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

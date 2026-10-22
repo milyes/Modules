@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-02-28T00:26:57.552834",
+  "network_stats": {
+    "overall_score": 63.0,
+    "device_count": 5,
+    "high_risk_count": 1,
+    "medium_risk_count": 3,
+    "low_risk_count": 1,
+    "last_updated": "2025-02-28T00:26:57.552772"
+  },
+  "devices_analyzed": 5,
+  "threats_detected": [],
+  "ai_recommendations": [
+    {
+      "title": "Surveillance comportementale du réseau",
+      "description": "Déployer une solution de détection d'anomalies basée sur l'apprentissage automatique pour identifier les comportements suspects.",
+      "ai_confidence": 85
+    },
+    {
+      "title": "Simulation d'attaque (Red Team)",
+      "description": "Organiser des exercices réguliers de simulation d'attaque pour tester les défenses et la réponse aux incidents.",
+      "ai_confidence": 80
+    },
+    {
+      "title": "Programme de formation à la sécurité",
+      "description": "Former régulièrement les utilisateurs aux meilleures pratiques de sécurité et aux techniques d'ingénierie sociale.",
+      "ai_confidence": 90
+    }
+  ],
+  "security_score": 0
+}

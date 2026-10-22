@@ -1,0 +1,62 @@
+{
+  "user_scores": {
+    "1": {
+      "xp": 95,
+      "level": 3,
+      "next_level_xp": 225,
+      "security_points": 63,
+      "defense_rating": 20,
+      "last_updated": "2025-02-27T15:41:27.402000"
+    }
+  },
+  "user_achievements": {
+    "1": []
+  },
+  "user_challenges": {
+    "1": [
+      {
+        "id": "login_streak",
+        "name": "Suivi r\u00e9gulier",
+        "description": "Se connecter 5 jours cons\u00e9cutifs",
+        "category": "engagement",
+        "progress": 0,
+        "target": 5,
+        "xp_reward": 60,
+        "status": "active",
+        "expires_at": "2025-03-09T15:41:27.401362"
+      },
+      {
+        "id": "fix_vulnerabilities",
+        "name": "Correction des vuln\u00e9rabilit\u00e9s",
+        "description": "Corriger 3 vuln\u00e9rabilit\u00e9s de niveau \u00e9lev\u00e9",
+        "category": "security",
+        "progress": 0,
+        "target": 3,
+        "xp_reward": 75,
+        "status": "active",
+        "expires_at": "2025-03-04T15:41:27.401355"
+      },
+      {
+        "id": "update_firmware",
+        "name": "Mise \u00e0 jour du firmware",
+        "description": "Mettre \u00e0 jour le firmware de 3 appareils",
+        "category": "maintenance",
+        "progress": 0,
+        "target": 3,
+        "xp_reward": 50,
+        "status": "active",
+        "expires_at": "2025-03-06T15:41:27.402042"
+      }
+    ]
+  },
+  "user_rewards": {
+    "1": []
+  },
+  "user_streaks": {
+    "1": {
+      "current_streak": 0,
+      "last_activity": "2025-02-27T15:41:27.401401",
+      "highest_streak": 0
+    }
+  }
+}

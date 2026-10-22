@@ -1,0 +1,3356 @@
+[
+  {
+    "ssid": "Réseau_Domicile",
+    "timestamp": "2025-02-26T21:01:34.540758",
+    "security_type": "WPA2",
+    "encryption": "AES",
+    "authentication": "PSK",
+    "vulnerabilities": [
+      {
+        "type": "wpa2_krack",
+        "severity": "medium",
+        "description": "Vulnérable à l'attaque KRACK (Key Reinstallation Attack)",
+        "impact": "Permet à un attaquant de décrypter le trafic dans certaines conditions"
+      },
+      {
+        "type": "weak_psk",
+        "severity": "medium",
+        "description": "Utilisation de clé pré-partagée (PSK)",
+        "impact": "Vulnérable aux attaques par dictionnaire et attaques pré-calculées"
+      }
+    ],
+    "score": 70,
+    "recommendations": [
+      {
+        "priority": "medium",
+        "action": "upgrade_to_wpa3",
+        "description": "Mettre à niveau vers WPA3 si possible",
+        "details": "WPA3 offre une protection contre les attaques KRACK et par dictionnaire. Si votre matériel le supporte, activez WPA3."
+      },
+      {
+        "priority": "medium",
+        "action": "strong_password",
+        "description": "Utiliser un mot de passe fort et complexe",
+        "details": "Avec WPA2-PSK, la force de votre mot de passe est critique. Utilisez une phrase de passe d'au moins 12 caractères mêlant lettres, chiffres et caractères spéciaux."
+      },
+      {
+        "priority": "medium",
+        "action": "consider_enterprise",
+        "description": "Envisager WPA2-Enterprise pour les environnements professionnels",
+        "details": "Pour les entreprises, WPA2-Enterprise avec 802.1X offre une meilleure sécurité et gestion des identifiants que WPA2-PSK."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Ancien",
+    "timestamp": "2025-02-26T21:01:34.542114",
+    "security_type": "WEP",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "wep_encryption",
+        "severity": "critical",
+        "description": "Chiffrement WEP obsolète et facilement crackable",
+        "impact": "Le chiffrement peut être cassé en quelques minutes avec des outils standard"
+      }
+    ],
+    "score": 30,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "upgrade_to_wpa3",
+        "description": "Remplacer WEP par WPA3-SAE immédiatement",
+        "details": "Le chiffrement WEP est cassable en minutes. Configurez votre routeur pour utiliser WPA3 avec authentification SAE."
+      },
+      {
+        "priority": "high",
+        "action": "change_router",
+        "description": "Envisager le remplacement des équipements anciens",
+        "details": "Si votre matériel ne prend pas en charge WPA3 ou au moins WPA2, il est fortement recommandé de le remplacer par des équipements modernes."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Invité",
+    "timestamp": "2025-02-26T21:01:34.543150",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Enterprise",
+    "timestamp": "2025-02-26T21:01:34.560443",
+    "security_type": "WPA2",
+    "encryption": "AES",
+    "authentication": "ENTERPRISE",
+    "vulnerabilities": [
+      {
+        "type": "wpa2_krack",
+        "severity": "medium",
+        "description": "Vulnérable à l'attaque KRACK (Key Reinstallation Attack)",
+        "impact": "Permet à un attaquant de décrypter le trafic dans certaines conditions"
+      }
+    ],
+    "score": 80,
+    "recommendations": [
+      {
+        "priority": "medium",
+        "action": "upgrade_to_wpa3",
+        "description": "Mettre à niveau vers WPA3 si possible",
+        "details": "WPA3 offre une protection contre les attaques KRACK et par dictionnaire. Si votre matériel le supporte, activez WPA3."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Moderne",
+    "timestamp": "2025-02-26T21:01:34.568416",
+    "security_type": "WPA3",
+    "encryption": "GCMP",
+    "authentication": "SAE",
+    "vulnerabilities": [
+      {
+        "type": "wpa3_dragonblood",
+        "severity": "low",
+        "description": "Potentiellement vulnérable aux attaques Dragonblood",
+        "impact": "Possible vulnérabilité aux attaques par dictionnaire dans des conditions spécifiques"
+      }
+    ],
+    "score": 95,
+    "recommendations": [
+      {
+        "priority": "low",
+        "action": "firmware_updates",
+        "description": "Maintenir le firmware à jour",
+        "details": "Assurez-vous que votre routeur bénéficie des dernières mises à jour de firmware pour corriger les vulnérabilités Dragonblood et autres failles."
+      },
+      {
+        "priority": "low",
+        "action": "transition_mode",
+        "description": "Désactiver le mode de transition WPA3-WPA2 si possible",
+        "details": "Si tous vos appareils supportent WPA3, désactivez le mode de compatibilité WPA2 pour éviter les attaques de rétrogradation vers WPA2."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Domicile",
+    "timestamp": "2025-02-26T22:14:52.728586",
+    "security_type": "WPA2",
+    "encryption": "AES",
+    "authentication": "PSK",
+    "vulnerabilities": [
+      {
+        "type": "wpa2_krack",
+        "severity": "medium",
+        "description": "Vulnérable à l'attaque KRACK (Key Reinstallation Attack)",
+        "impact": "Permet à un attaquant de décrypter le trafic dans certaines conditions"
+      },
+      {
+        "type": "weak_psk",
+        "severity": "medium",
+        "description": "Utilisation de clé pré-partagée (PSK)",
+        "impact": "Vulnérable aux attaques par dictionnaire et attaques pré-calculées"
+      }
+    ],
+    "score": 70,
+    "recommendations": [
+      {
+        "priority": "medium",
+        "action": "upgrade_to_wpa3",
+        "description": "Mettre à niveau vers WPA3 si possible",
+        "details": "WPA3 offre une protection contre les attaques KRACK et par dictionnaire. Si votre matériel le supporte, activez WPA3."
+      },
+      {
+        "priority": "medium",
+        "action": "strong_password",
+        "description": "Utiliser un mot de passe fort et complexe",
+        "details": "Avec WPA2-PSK, la force de votre mot de passe est critique. Utilisez une phrase de passe d'au moins 12 caractères mêlant lettres, chiffres et caractères spéciaux."
+      },
+      {
+        "priority": "medium",
+        "action": "consider_enterprise",
+        "description": "Envisager WPA2-Enterprise pour les environnements professionnels",
+        "details": "Pour les entreprises, WPA2-Enterprise avec 802.1X offre une meilleure sécurité et gestion des identifiants que WPA2-PSK."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Ancien",
+    "timestamp": "2025-02-26T22:14:52.731733",
+    "security_type": "WEP",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "wep_encryption",
+        "severity": "critical",
+        "description": "Chiffrement WEP obsolète et facilement crackable",
+        "impact": "Le chiffrement peut être cassé en quelques minutes avec des outils standard"
+      }
+    ],
+    "score": 30,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "upgrade_to_wpa3",
+        "description": "Remplacer WEP par WPA3-SAE immédiatement",
+        "details": "Le chiffrement WEP est cassable en minutes. Configurez votre routeur pour utiliser WPA3 avec authentification SAE."
+      },
+      {
+        "priority": "high",
+        "action": "change_router",
+        "description": "Envisager le remplacement des équipements anciens",
+        "details": "Si votre matériel ne prend pas en charge WPA3 ou au moins WPA2, il est fortement recommandé de le remplacer par des équipements modernes."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Moderne",
+    "timestamp": "2025-02-26T22:14:52.752677",
+    "security_type": "WPA3",
+    "encryption": "GCMP",
+    "authentication": "SAE",
+    "vulnerabilities": [
+      {
+        "type": "wpa3_dragonblood",
+        "severity": "low",
+        "description": "Potentiellement vulnérable aux attaques Dragonblood",
+        "impact": "Possible vulnérabilité aux attaques par dictionnaire dans des conditions spécifiques"
+      }
+    ],
+    "score": 95,
+    "recommendations": [
+      {
+        "priority": "low",
+        "action": "firmware_updates",
+        "description": "Maintenir le firmware à jour",
+        "details": "Assurez-vous que votre routeur bénéficie des dernières mises à jour de firmware pour corriger les vulnérabilités Dragonblood et autres failles."
+      },
+      {
+        "priority": "low",
+        "action": "transition_mode",
+        "description": "Désactiver le mode de transition WPA3-WPA2 si possible",
+        "details": "Si tous vos appareils supportent WPA3, désactivez le mode de compatibilité WPA2 pour éviter les attaques de rétrogradation vers WPA2."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Domicile",
+    "timestamp": "2025-02-26T22:20:24.620166",
+    "security_type": "WPA2",
+    "encryption": "AES",
+    "authentication": "PSK",
+    "vulnerabilities": [
+      {
+        "type": "wpa2_krack",
+        "severity": "medium",
+        "description": "Vulnérable à l'attaque KRACK (Key Reinstallation Attack)",
+        "impact": "Permet à un attaquant de décrypter le trafic dans certaines conditions"
+      },
+      {
+        "type": "weak_psk",
+        "severity": "medium",
+        "description": "Utilisation de clé pré-partagée (PSK)",
+        "impact": "Vulnérable aux attaques par dictionnaire et attaques pré-calculées"
+      }
+    ],
+    "score": 70,
+    "recommendations": [
+      {
+        "priority": "medium",
+        "action": "upgrade_to_wpa3",
+        "description": "Mettre à niveau vers WPA3 si possible",
+        "details": "WPA3 offre une protection contre les attaques KRACK et par dictionnaire. Si votre matériel le supporte, activez WPA3."
+      },
+      {
+        "priority": "medium",
+        "action": "strong_password",
+        "description": "Utiliser un mot de passe fort et complexe",
+        "details": "Avec WPA2-PSK, la force de votre mot de passe est critique. Utilisez une phrase de passe d'au moins 12 caractères mêlant lettres, chiffres et caractères spéciaux."
+      },
+      {
+        "priority": "medium",
+        "action": "consider_enterprise",
+        "description": "Envisager WPA2-Enterprise pour les environnements professionnels",
+        "details": "Pour les entreprises, WPA2-Enterprise avec 802.1X offre une meilleure sécurité et gestion des identifiants que WPA2-PSK."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Ancien",
+    "timestamp": "2025-02-26T22:20:24.622015",
+    "security_type": "WEP",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "wep_encryption",
+        "severity": "critical",
+        "description": "Chiffrement WEP obsolète et facilement crackable",
+        "impact": "Le chiffrement peut être cassé en quelques minutes avec des outils standard"
+      }
+    ],
+    "score": 30,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "upgrade_to_wpa3",
+        "description": "Remplacer WEP par WPA3-SAE immédiatement",
+        "details": "Le chiffrement WEP est cassable en minutes. Configurez votre routeur pour utiliser WPA3 avec authentification SAE."
+      },
+      {
+        "priority": "high",
+        "action": "change_router",
+        "description": "Envisager le remplacement des équipements anciens",
+        "details": "Si votre matériel ne prend pas en charge WPA3 ou au moins WPA2, il est fortement recommandé de le remplacer par des équipements modernes."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Invité",
+    "timestamp": "2025-02-26T22:20:24.631488",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Enterprise",
+    "timestamp": "2025-02-26T22:20:24.635286",
+    "security_type": "WPA2",
+    "encryption": "AES",
+    "authentication": "ENTERPRISE",
+    "vulnerabilities": [
+      {
+        "type": "wpa2_krack",
+        "severity": "medium",
+        "description": "Vulnérable à l'attaque KRACK (Key Reinstallation Attack)",
+        "impact": "Permet à un attaquant de décrypter le trafic dans certaines conditions"
+      }
+    ],
+    "score": 80,
+    "recommendations": [
+      {
+        "priority": "medium",
+        "action": "upgrade_to_wpa3",
+        "description": "Mettre à niveau vers WPA3 si possible",
+        "details": "WPA3 offre une protection contre les attaques KRACK et par dictionnaire. Si votre matériel le supporte, activez WPA3."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Moderne",
+    "timestamp": "2025-02-26T22:20:24.637635",
+    "security_type": "WPA3",
+    "encryption": "GCMP",
+    "authentication": "SAE",
+    "vulnerabilities": [
+      {
+        "type": "wpa3_dragonblood",
+        "severity": "low",
+        "description": "Potentiellement vulnérable aux attaques Dragonblood",
+        "impact": "Possible vulnérabilité aux attaques par dictionnaire dans des conditions spécifiques"
+      }
+    ],
+    "score": 95,
+    "recommendations": [
+      {
+        "priority": "low",
+        "action": "firmware_updates",
+        "description": "Maintenir le firmware à jour",
+        "details": "Assurez-vous que votre routeur bénéficie des dernières mises à jour de firmware pour corriger les vulnérabilités Dragonblood et autres failles."
+      },
+      {
+        "priority": "low",
+        "action": "transition_mode",
+        "description": "Désactiver le mode de transition WPA3-WPA2 si possible",
+        "details": "Si tous vos appareils supportent WPA3, désactivez le mode de compatibilité WPA2 pour éviter les attaques de rétrogradation vers WPA2."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Domicile",
+    "timestamp": "2025-02-27T00:28:27.762150",
+    "security_type": "WPA2",
+    "encryption": "AES",
+    "authentication": "PSK",
+    "vulnerabilities": [
+      {
+        "type": "wpa2_krack",
+        "severity": "medium",
+        "description": "Vulnérable à l'attaque KRACK (Key Reinstallation Attack)",
+        "impact": "Permet à un attaquant de décrypter le trafic dans certaines conditions"
+      },
+      {
+        "type": "weak_psk",
+        "severity": "medium",
+        "description": "Utilisation de clé pré-partagée (PSK)",
+        "impact": "Vulnérable aux attaques par dictionnaire et attaques pré-calculées"
+      }
+    ],
+    "score": 70,
+    "recommendations": [
+      {
+        "priority": "medium",
+        "action": "upgrade_to_wpa3",
+        "description": "Mettre à niveau vers WPA3 si possible",
+        "details": "WPA3 offre une protection contre les attaques KRACK et par dictionnaire. Si votre matériel le supporte, activez WPA3."
+      },
+      {
+        "priority": "medium",
+        "action": "strong_password",
+        "description": "Utiliser un mot de passe fort et complexe",
+        "details": "Avec WPA2-PSK, la force de votre mot de passe est critique. Utilisez une phrase de passe d'au moins 12 caractères mêlant lettres, chiffres et caractères spéciaux."
+      },
+      {
+        "priority": "medium",
+        "action": "consider_enterprise",
+        "description": "Envisager WPA2-Enterprise pour les environnements professionnels",
+        "details": "Pour les entreprises, WPA2-Enterprise avec 802.1X offre une meilleure sécurité et gestion des identifiants que WPA2-PSK."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Ancien",
+    "timestamp": "2025-02-27T00:28:27.763412",
+    "security_type": "WEP",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "wep_encryption",
+        "severity": "critical",
+        "description": "Chiffrement WEP obsolète et facilement crackable",
+        "impact": "Le chiffrement peut être cassé en quelques minutes avec des outils standard"
+      }
+    ],
+    "score": 30,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "upgrade_to_wpa3",
+        "description": "Remplacer WEP par WPA3-SAE immédiatement",
+        "details": "Le chiffrement WEP est cassable en minutes. Configurez votre routeur pour utiliser WPA3 avec authentification SAE."
+      },
+      {
+        "priority": "high",
+        "action": "change_router",
+        "description": "Envisager le remplacement des équipements anciens",
+        "details": "Si votre matériel ne prend pas en charge WPA3 ou au moins WPA2, il est fortement recommandé de le remplacer par des équipements modernes."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Invité",
+    "timestamp": "2025-02-27T00:28:27.779523",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Enterprise",
+    "timestamp": "2025-02-27T00:28:27.783080",
+    "security_type": "WPA2",
+    "encryption": "AES",
+    "authentication": "ENTERPRISE",
+    "vulnerabilities": [
+      {
+        "type": "wpa2_krack",
+        "severity": "medium",
+        "description": "Vulnérable à l'attaque KRACK (Key Reinstallation Attack)",
+        "impact": "Permet à un attaquant de décrypter le trafic dans certaines conditions"
+      }
+    ],
+    "score": 80,
+    "recommendations": [
+      {
+        "priority": "medium",
+        "action": "upgrade_to_wpa3",
+        "description": "Mettre à niveau vers WPA3 si possible",
+        "details": "WPA3 offre une protection contre les attaques KRACK et par dictionnaire. Si votre matériel le supporte, activez WPA3."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Moderne",
+    "timestamp": "2025-02-27T00:28:27.787501",
+    "security_type": "WPA3",
+    "encryption": "GCMP",
+    "authentication": "SAE",
+    "vulnerabilities": [
+      {
+        "type": "wpa3_dragonblood",
+        "severity": "low",
+        "description": "Potentiellement vulnérable aux attaques Dragonblood",
+        "impact": "Possible vulnérabilité aux attaques par dictionnaire dans des conditions spécifiques"
+      }
+    ],
+    "score": 95,
+    "recommendations": [
+      {
+        "priority": "low",
+        "action": "firmware_updates",
+        "description": "Maintenir le firmware à jour",
+        "details": "Assurez-vous que votre routeur bénéficie des dernières mises à jour de firmware pour corriger les vulnérabilités Dragonblood et autres failles."
+      },
+      {
+        "priority": "low",
+        "action": "transition_mode",
+        "description": "Désactiver le mode de transition WPA3-WPA2 si possible",
+        "details": "Si tous vos appareils supportent WPA3, désactivez le mode de compatibilité WPA2 pour éviter les attaques de rétrogradation vers WPA2."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Domicile",
+    "timestamp": "2025-02-27T00:30:08.201577",
+    "security_type": "WPA2",
+    "encryption": "AES",
+    "authentication": "PSK",
+    "vulnerabilities": [
+      {
+        "type": "wpa2_krack",
+        "severity": "medium",
+        "description": "Vulnérable à l'attaque KRACK (Key Reinstallation Attack)",
+        "impact": "Permet à un attaquant de décrypter le trafic dans certaines conditions"
+      },
+      {
+        "type": "weak_psk",
+        "severity": "medium",
+        "description": "Utilisation de clé pré-partagée (PSK)",
+        "impact": "Vulnérable aux attaques par dictionnaire et attaques pré-calculées"
+      }
+    ],
+    "score": 70,
+    "recommendations": [
+      {
+        "priority": "medium",
+        "action": "upgrade_to_wpa3",
+        "description": "Mettre à niveau vers WPA3 si possible",
+        "details": "WPA3 offre une protection contre les attaques KRACK et par dictionnaire. Si votre matériel le supporte, activez WPA3."
+      },
+      {
+        "priority": "medium",
+        "action": "strong_password",
+        "description": "Utiliser un mot de passe fort et complexe",
+        "details": "Avec WPA2-PSK, la force de votre mot de passe est critique. Utilisez une phrase de passe d'au moins 12 caractères mêlant lettres, chiffres et caractères spéciaux."
+      },
+      {
+        "priority": "medium",
+        "action": "consider_enterprise",
+        "description": "Envisager WPA2-Enterprise pour les environnements professionnels",
+        "details": "Pour les entreprises, WPA2-Enterprise avec 802.1X offre une meilleure sécurité et gestion des identifiants que WPA2-PSK."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Ancien",
+    "timestamp": "2025-02-27T00:30:08.202980",
+    "security_type": "WEP",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "wep_encryption",
+        "severity": "critical",
+        "description": "Chiffrement WEP obsolète et facilement crackable",
+        "impact": "Le chiffrement peut être cassé en quelques minutes avec des outils standard"
+      }
+    ],
+    "score": 30,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "upgrade_to_wpa3",
+        "description": "Remplacer WEP par WPA3-SAE immédiatement",
+        "details": "Le chiffrement WEP est cassable en minutes. Configurez votre routeur pour utiliser WPA3 avec authentification SAE."
+      },
+      {
+        "priority": "high",
+        "action": "change_router",
+        "description": "Envisager le remplacement des équipements anciens",
+        "details": "Si votre matériel ne prend pas en charge WPA3 ou au moins WPA2, il est fortement recommandé de le remplacer par des équipements modernes."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Réseau_Moderne",
+    "timestamp": "2025-02-27T00:30:08.207302",
+    "security_type": "WPA3",
+    "encryption": "GCMP",
+    "authentication": "SAE",
+    "vulnerabilities": [
+      {
+        "type": "wpa3_dragonblood",
+        "severity": "low",
+        "description": "Potentiellement vulnérable aux attaques Dragonblood",
+        "impact": "Possible vulnérabilité aux attaques par dictionnaire dans des conditions spécifiques"
+      }
+    ],
+    "score": 95,
+    "recommendations": [
+      {
+        "priority": "low",
+        "action": "firmware_updates",
+        "description": "Maintenir le firmware à jour",
+        "details": "Assurez-vous que votre routeur bénéficie des dernières mises à jour de firmware pour corriger les vulnérabilités Dragonblood et autres failles."
+      },
+      {
+        "priority": "low",
+        "action": "transition_mode",
+        "description": "Désactiver le mode de transition WPA3-WPA2 si possible",
+        "details": "Si tous vos appareils supportent WPA3, désactivez le mode de compatibilité WPA2 pour éviter les attaques de rétrogradation vers WPA2."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Familiahilario",
+    "timestamp": "2025-02-28T00:49:44.499754",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.505284",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.507547",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "ArevaloVinasco",
+    "timestamp": "2025-02-28T00:49:44.513354",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Altima-01269E74",
+    "timestamp": "2025-02-28T00:49:44.515763",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "FILOU",
+    "timestamp": "2025-02-28T00:49:44.519359",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "blackhole-F3CB30",
+    "timestamp": "2025-02-28T00:49:44.521894",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "BELL120",
+    "timestamp": "2025-02-28T00:49:44.525997",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "DIRECT-HA-FireTV_fbe5",
+    "timestamp": "2025-02-28T00:49:44.528519",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.531966",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "SmartLife-6C32",
+    "timestamp": "2025-02-28T00:49:44.537643",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.542105",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.544915",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Ghita",
+    "timestamp": "2025-02-28T00:49:44.549274",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.552368",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Ghita",
+    "timestamp": "2025-02-28T00:49:44.556855",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.561105",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "BELL292",
+    "timestamp": "2025-02-28T00:49:44.566443",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.570384",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "BELL056",
+    "timestamp": "2025-02-28T00:49:44.575553",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "BELL292-V",
+    "timestamp": "2025-02-28T00:49:44.578725",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.586128",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.590983",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Helix 4355",
+    "timestamp": "2025-02-28T00:49:44.596444",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "BELL292-V",
+    "timestamp": "2025-02-28T00:49:44.600135",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Familiahilario",
+    "timestamp": "2025-02-28T00:49:44.605542",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "BELL717",
+    "timestamp": "2025-02-28T00:49:44.608962",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "BELL349",
+    "timestamp": "2025-02-28T00:49:44.615227",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "DIRECT-roku-FU5-73313C",
+    "timestamp": "2025-02-28T00:49:44.621852",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.627479",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "BELL292-V",
+    "timestamp": "2025-02-28T00:49:44.634220",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Ermitage",
+    "timestamp": "2025-02-28T00:49:44.638057",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "TELUSWiFi6839",
+    "timestamp": "2025-02-28T00:49:44.644555",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.650485",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "TNEXT Y051",
+    "timestamp": "2025-02-28T00:49:44.654761",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "M-audio",
+    "timestamp": "2025-02-28T00:49:44.661789",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.668279",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.672915",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "VIDEOTRON1400_5GHz",
+    "timestamp": "2025-02-28T00:49:44.678740",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "M-audio_5G-1",
+    "timestamp": "2025-02-28T00:49:44.685238",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "BELL292",
+    "timestamp": "2025-02-28T00:49:44.689817",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.697164",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.703753",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "BELL349",
+    "timestamp": "2025-02-28T00:49:44.709049",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "BELL292",
+    "timestamp": "2025-02-28T00:49:44.713931",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "M-audio_5G-1",
+    "timestamp": "2025-02-28T00:49:44.720361",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "VIRGIN098",
+    "timestamp": "2025-02-28T00:49:44.728676",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.736766",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "M-audio",
+    "timestamp": "2025-02-28T00:49:44.742705",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "BELL349",
+    "timestamp": "2025-02-28T00:49:44.750570",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.756262",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "TNEXT Y051",
+    "timestamp": "2025-02-28T00:49:44.763909",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "PS4-B2C9679B0C2D",
+    "timestamp": "2025-02-28T00:49:44.772564",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.776989",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "TNEXT Y051",
+    "timestamp": "2025-02-28T00:49:44.782968",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Familiahilario-5G",
+    "timestamp": "2025-02-28T00:49:44.791018",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "M-audio_5G-1",
+    "timestamp": "2025-02-28T00:49:44.797899",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.808324",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.815110",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "M-audio_5G-2",
+    "timestamp": "2025-02-28T00:49:44.828474",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "TP-Link_999E_5G",
+    "timestamp": "2025-02-28T00:49:44.836673",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "TP-Link_999E",
+    "timestamp": "2025-02-28T00:49:44.845926",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "DIRECT-roku-880-C780B9",
+    "timestamp": "2025-02-28T00:49:44.855068",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "",
+    "timestamp": "2025-02-28T00:49:44.861098",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "M-audio_6G",
+    "timestamp": "2025-02-28T00:49:44.869896",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "BELL120",
+    "timestamp": "2025-02-28T00:49:44.876817",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "Helix 4355",
+    "timestamp": "2025-02-28T00:49:44.888244",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  },
+  {
+    "ssid": "M-audio",
+    "timestamp": "2025-02-28T00:49:44.897490",
+    "security_type": "OPEN",
+    "encryption": null,
+    "authentication": null,
+    "vulnerabilities": [
+      {
+        "type": "open_network",
+        "severity": "critical",
+        "description": "Réseau ouvert sans chiffrement",
+        "impact": "Toutes les données transitant par ce réseau peuvent être interceptées et lues"
+      }
+    ],
+    "score": 20,
+    "recommendations": [
+      {
+        "priority": "critical",
+        "action": "enable_encryption",
+        "description": "Activer le chiffrement WPA3-SAE sur ce réseau",
+        "details": "Les réseaux ouverts exposent toutes les communications à l'interception. Configurez votre routeur pour utiliser WPA3 avec authentification SAE pour une sécurité maximale."
+      },
+      {
+        "priority": "medium",
+        "action": "disable_wps",
+        "description": "Désactiver WPS (Wi-Fi Protected Setup)",
+        "details": "WPS peut introduire des vulnérabilités indépendamment du protocole de sécurité choisi."
+      },
+      {
+        "priority": "medium",
+        "action": "guest_network",
+        "description": "Utiliser un réseau invité séparé",
+        "details": "Configurez un réseau invité distinct pour les visiteurs et les appareils IoT afin d'isoler les appareils potentiellement compromis."
+      }
+    ]
+  }
+]
