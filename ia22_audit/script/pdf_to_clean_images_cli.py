@@ -1,0 +1,1 @@
+# Script Python PDF CLI (contenu réel à insérer ici selon le précédent)

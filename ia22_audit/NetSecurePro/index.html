@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetSecurePro - Accueil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #33ff33;
+      font-family: 'Press Start 2P', monospace;
+      padding: 40px;
+      font-size: 12px;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #00ffff;
+      text-shadow: 0 0 4px #00ffff;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin: 15px 0;
+    }
+
+    a {
+      color: #ff66ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      color: #00ff00;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      z-index: 9999;
+      animation: fadeOut 3s forwards;
+      animation-delay: 2.5s;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    #content {
+      opacity: 0;
+      animation: showContent 1s forwards;
+      animation-delay: 3s;
+    }
+
+    @keyframes showContent {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .logo {
+      font-size: 16px;
+      color: #00ffcc;
+      text-align: center;
+      margin-bottom: 30px;
+      text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+      animation: blink 1.5s infinite alternate;
+    }
+
+    @keyframes blink {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="intro">> Initialisation NetSecurePro... OK</div>
+
+  <div id="content">
+    <div class="logo">[ NetSecurePro System ]</div>
+    <h1>Bienvenue sur la plateforme</h1>
+    <p>Choisissez une section :</p>
+    <ul>
+      <li><a href="index1.html">Fix du mod Smart Medicine</a></li>
+      <li><a href="terminal.html">Interface IA Terminal</a></li>
+      <li><a href="tools.html">Outils & Scripts</a></li>
+      <li><a href="about.html">À propos</a></li>
+    </ul>
+  </div>
+</body>
+</html>

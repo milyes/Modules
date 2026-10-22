@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Outils – Milyes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #0e1117, #1a1f29);
+      color: #e5e7eb;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    nav {
+      background-color: #10151e;
+      display: flex;
+      justify-content: center;
+      padding: 14px 0;
+      border-bottom: 1px solid #2a2f3a;
+    }
+    nav a {
+      margin: 0 20px;
+      color: #60aaff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.3em;
+      color: #00c3ff;
+    }
+    a {
+      color: #60aaff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 10px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="tools.html">Outils</a>
+  </nav>
+  <div class="container">
+    <div class="card">
+      <h2>Script PDF Lisible (Termux / PC)</h2>
+      <p>Convertit un PDF corrompu ou illisible en un fichier PDF lisible basé sur des images (avec nettoyage auto).</p>
+      <p><a href="scripts/pdf_to_clean_images_cli.py" download>Télécharger le script Python</a></p>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Milyes – Tous droits réservés.
+  </footer>
+</body>
+</html>

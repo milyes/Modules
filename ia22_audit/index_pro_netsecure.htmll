@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetSecurePro · Milyes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0f1a;
+            color: #fff;
+        }
+        header {
+            background: linear-gradient(90deg, #0d47a1, #1976d2);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            letter-spacing: 1px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #10233e;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #00e5ff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
+        main {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        footer {
+            background: #0d1b2a;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NetSecurePro</h1>
+        <p>Projets IA & Cybersécurité – by Milyes</p>
+    </header>
+    <nav>
+        <a href="https://wardam-me.github.io/netpro/" target="_blank">NetPro (Wardam)</a>
+        <a href="https://milyes.github.io/netsecurepro-site/" target="_blank">NetSecurePro (Milyes)</a>
+    </nav>
+    <main>
+        <h2>Bienvenue sur le portail officiel</h2>
+        <p>Explorez les projets IA, cybersécurité et interfaces intelligentes développés dans l’écosystème NetSecurePro.</p>
+    </main>
+    <footer>
+        &copy; 2025 NetSecurePro · Conçu par Milyes
+    </footer>
+</body>
+</html>
